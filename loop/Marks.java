@@ -1,0 +1,29 @@
+package loop;
+
+import java.util.Scanner;
+
+public class Marks {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int input;
+        do {
+            int marks = sc.nextInt();
+            if (marks >= 90 && marks <= 100) {
+                System.out.println("good marks");
+            } else if (marks >= 60 && marks <= 89) {
+                System.out.println("also good");
+            } else if (marks >= 30 && marks <= 59) {
+                System.out.println("better");
+            } else if (marks < 30) {
+                System.out.println("fail");
+            } else {
+                System.out.println("invalid");
+            }
+            System.out.println("Wants to continue ? (yes(1) or no(0))");
+            input = sc.nextInt();
+
+        } while (input == 1);
+        sc.close();
+    }
+}
